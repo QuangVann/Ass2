@@ -7,6 +7,9 @@ type FieldType = {
     name: string;
     price: number;
 };
+type File = {
+    img: string
+}
 const AdminProductAdd = () => {
     const [addProduct, { isLoading }] = useAddProductMutation();
     const navigate = useNavigate();
@@ -34,6 +37,18 @@ const AdminProductAdd = () => {
                     rules={[
                         { required: true, message: "Vui lòng nhập tên sản phẩm!" },
                         { min: 3, message: "Sản phẩm ít nhất 3 ký tự" },
+                    ]}
+                >
+                    <Input />
+                </Form.Item>
+
+
+                <Form.Item<File>
+                    label="Ảnh sản phẩm"
+                    name="img"
+                    rules={[
+                        { required: true, message: "Vui lòng tải ảnh lên" },
+                       
                     ]}
                 >
                     <Input />

@@ -7,7 +7,11 @@ import { useNavigate, useParams } from "react-router-dom";
 type FieldType = {
     name: string;
     price: number;
+    
 };
+type File = {
+    img: string;
+}
 const AdminProductEdit = () => {
     const { idProduct } = useParams<{ idProduct: string }>();
     const { data: productData, isLoading } = useGetProductByIdQuery(idProduct || "");
@@ -19,6 +23,7 @@ const AdminProductEdit = () => {
         form.setFieldsValue({
             name: productData?.name,
             price: productData?.price,
+            img: productData?.img,
         });
     }, [productData]);
     const onFinish = (values: IProduct) => {
@@ -52,6 +57,14 @@ const AdminProductEdit = () => {
                         ]}
                     >
                         <Input />
+
+                    </Form.Item>
+                    <Form.Item<File>
+                        label="Ảnh sản phẩm"
+                        name="img"
+                       
+                    >
+                        <Input  />
                     </Form.Item>
 
                     <Form.Item<FieldType> label="Giá sản phẩm" name="price">

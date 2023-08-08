@@ -6,9 +6,10 @@ import Dashboard from "./pages/admin/dashboard";
 import AdminProduct from "./pages/admin/product";
 import AdminProductAdd from "./pages/admin/product/add";
 import AdminProductEdit from "./pages/admin/product/edit";
-
+import Footer from './pages/footer'
 export const router = createBrowserRouter([
-    { path: "/", element: <HomePage /> },
+    { path: "/", element: <HomePage />,
+ },
     {
         path: "/admin",
         element: <LayoutAdmin />,

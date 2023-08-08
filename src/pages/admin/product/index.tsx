@@ -13,10 +13,11 @@ const AdminProduct = (props: Props) => {
     const confirm = (id: number) => {
         removeProduct(id);
     };
-    const dataSource = productData?.map(({ id, name, price }: IProduct) => ({
+    const dataSource = productData?.map(({ id, name, price, img }: IProduct) => ({
         key: id,
         name,
         price,
+        img
     }));
     const columns = [
         {
@@ -28,6 +29,12 @@ const AdminProduct = (props: Props) => {
             title: "Giá",
             dataIndex: "price",
             key: "price",
+        },
+        {
+            title: "Ảnh sản phẩm",
+            dataIndex: "img",
+            key: "img",
+            render: (img: string) => <img src={img} alt="Product" style={{ width: "50px", height: "50px" }} />,
         },
         {
             title: "",
