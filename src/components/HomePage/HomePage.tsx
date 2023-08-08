@@ -44,11 +44,12 @@ const HomePage = (props: Props) => {
                 <h2 className="text-xl font-semibold mb-2" >SẢN PHẨM ĐẠT TOP</h2>
                 <div className="container mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {productData?.map(({ id, name, price }) => (
+              {productData?.map(({ id, name, price, img }) => (
                 <div key={id} className="bg-white p-6 rounded shadow">
+                     <img className="w-[300px]" src={img} alt="" />
                   <h2 className="text-xl font-semibold mb-2">{name}</h2>
-                  <p>Price: {price}</p>
-                  
+                  <p>Giá: {price}</p>
+                 
                 </div>
               ))}
             </div>

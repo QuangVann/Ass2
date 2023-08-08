@@ -3,19 +3,23 @@
     {
       "id": 1,
       "name": "product A",
-      "price": 100
+      "price": 100,
+      "img": "https://res.cloudinary.com/drecbsopp/image/upload/v1627398399/samasung-galaxy-a51-8gb-8uh_tndbgv.jpg"
     },
     {
       "id": 2,
       "name": "product B",
-      "price": 200
+      "price": 200,
+      "img": "https://res.cloudinary.com/drecbsopp/image/upload/v1627398477/MotoGPowerDual_2021_Reformatted_1_330x_wp8gve.png"
     },
     {
       "name": "Sản phẩm C",
       "price": "300",
-      "id": 3
+      "id": 3,
+      "img": "https://res.cloudinary.com/drecbsopp/image/upload/v1627398543/D7A7DA95-AEF8-228B-A2D2-A3FEBF237C33_y9p6wq.png"
     },
     {
+      "img": "https://res.cloudinary.com/drecbsopp/image/upload/v1627398698/nokia3_resize_md_qdw7bv.jpg",
       "name": "Sản phẩm D update",
       "price": "400",
       "id": 4

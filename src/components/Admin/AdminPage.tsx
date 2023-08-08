@@ -5,6 +5,8 @@ import {
     AiOutlineMenuUnfold,
     AiOutlineUser,
     AiOutlineVideoCamera,
+    AiFillBank,
+    AiFillRobot
 } from "react-icons/ai";
 import { Link, Outlet } from "react-router-dom";
 
@@ -17,14 +19,18 @@ const AdminPage = () => {
     } = theme.useToken();
 
     return (
+       
         <Layout className="h-screen">
+             
             <Sider trigger={null} collapsible collapsed={collapsed}>
                 <div className="demo-logo-vertical" />
                 <Menu
+                
                     theme="dark"
                     mode="inline"
                     defaultSelectedKeys={["1"]}
                     items={[
+                        
                         {
                             key: "1",
                             icon: <AiOutlineUser />,
@@ -32,8 +38,13 @@ const AdminPage = () => {
                         },
                         {
                             key: "2",
-                            icon: <AiOutlineVideoCamera />,
+                            icon: <AiFillRobot />,
                             label: <Link to="/admin/product">Sản phẩm</Link>,
+                        },
+                        {
+                            key: "3",
+                            icon: <AiFillBank />,
+                            label: <Link to="/">Trang Chủ</Link>,
                         },
                     ]}
                 />
